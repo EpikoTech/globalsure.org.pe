@@ -21,6 +21,7 @@ body {
 
 }
 
+/*Foto de perfil*/
 .inicio .foto {
     background: rgb(255, 255, 255);
     border-color: 3px solid rgb(183, 55, 121);
@@ -32,17 +33,18 @@ body {
     margin:0 auto;
 }
 
+/*Estilo a las palabras del formulario*/
 .inicio p{
     margin-bottom: -67;
 }
 
+/*Formulario de iniciar sección*/
 .inicio .input-box {
     width: 100%;
     height: 50px;
     background: transparent;
     margin: 30px, 0;
 }
-
 .input-box input {
     width: 91%;
     height: 90%;
@@ -56,6 +58,7 @@ body {
     padding: 0px 16px 0px 16px;
 }
 
+/*Boton de Iniciar*/
 .inicio .boton {
     width: 100%;
     height: 40px;
@@ -64,24 +67,25 @@ body {
     outline: none;
     border-radius: 8px;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 18px;
     color: rgb(52, 45, 45);
     font-weight: 600;
     margin-top: 18px;
 }
 
-.inicio .remember-forgot{
+/*Nuevo usuario - olvidaste la contraseña*/
+.inicio .nuevo-olvidaste{
     display: flex;
     justify-content: space-between;
-    font-size: 16.5px;
+    font-size: 17px;
     margin: 15px 0 15px;
 }
 
-.remember-forgot a {
+.nuevo-olvidaste a {
     color: #ffffff;
     text-decoration: none;
 }
 
-.remember-forgot a:hover {
+.nuevo-olvidaste a:hover {
     text-decoration: underline;
 }
