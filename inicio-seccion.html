@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="ajax.js"></script> <!-- Incluyendo el archivo ajax.js -->
+    <script src="registroajax.js"></script>
 </head>
 <body>
     <div class="inicio">
@@ -27,13 +28,13 @@
             <button type="submit" class="boton">Iniciar</button>
 
             <div class="nuevo-olvidaste">
-                <a href="#">Nuevo Usuario</a>
+                <a href="#" data-toggle="modal" data-target="#registroModal">Nuevo Usuario</a>
                 <a href="#">Olvidaste Clave?</a>
             </div>
         </form>
     </div>
 
-    <!-- Modal que muestra la pantalla al equivocarse en iniciar sesion-->
+    <!-- Modal que muestra la pantalla al equivocarse en iniciar sesión-->
     <div class="modal fade" id="errorModal" tabindex="-1" role="dialog" aria-labelledby="errorModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -50,6 +51,53 @@
             </div>
         </div>
     </div>
+
+    <!-- Modal para el registro de nuevos usuarios -->
+    <!-- Modal para el registro de nuevos usuarios -->
+<div class="modal fade" id="registroModal" tabindex="-1" role="dialog" aria-labelledby="registroModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registroModalLabel">Registrar Nuevo Usuario</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="registroForm" method="POST">
+                    <label for="username">NOMBRE DE USUARIO:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+
+                    <label for="password">CONTRASEÑA:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" name="nombres" required><br><br>
+
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" required><br><br>
+
+                    <label for="dni">DNI:</label>
+                    <input type="text" id="dni" name="dni" required><br><br>
+
+                    <label for="email">CORREO ELECTRÓNICO:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="celular">CELULAR:</label>
+                    <input type="text" id="celular" name="celular" required><br><br>
+
+                    <label for="fecha_nacimiento">FECHA DE NACIMIENTO:</label>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="btnRegistrar">Registrar Usuario</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>
