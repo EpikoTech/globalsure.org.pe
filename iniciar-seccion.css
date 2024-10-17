@@ -31,6 +31,7 @@ body {
     border-radius: 100%;
     position: static;
     margin:0 auto;
+    margin-bottom: 26px;
 }
 
 /*Estilo a las palabras del formulario*/
