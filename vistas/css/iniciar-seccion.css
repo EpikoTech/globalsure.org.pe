@@ -1,0 +1,92 @@
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('atardecer.jpg') no-repeat;
+}
+
+.inicio {
+    width: 410px;
+    background: transparent;
+    border: 2px solid rgb(235, 222, 216);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 18px;
+    border-radius: 20px;
+    padding: 40px 40px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+/*Foto de perfil*/
+.inicio .foto {
+    background: rgb(255, 255, 255);
+    border-color: 3px solid rgb(183, 55, 121);
+    width: 160px;
+    height: 160px;
+    margin: 20px;
+    border-radius: 100%;
+    position: static;
+    margin:0 auto;
+    margin-bottom: 26px;
+}
+
+/*Estilo a las palabras del formulario*/
+.inicio p{
+    margin-bottom: -67;
+}
+
+/*Formulario de iniciar sección*/
+.inicio .input-box {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    margin: 30px, 0;
+}
+.input-box input {
+    width: 91%;
+    height: 90%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(239, 220, 208);
+    border-radius:16px;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 0px 16px 0px 16px;
+}
+
+/*Boton de Iniciar*/
+.inicio .boton {
+    width: 100%;
+    height: 40px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    color: rgb(52, 45, 45);
+    font-weight: 600;
+    margin-top: 32px;
+}
+
+/*Nuevo usuario - olvidaste la contraseña*/
+.inicio .nuevo-olvidaste{
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    margin: 24px 0 15px;
+}
+
+.nuevo-olvidaste a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nuevo-olvidaste a:hover {
+    text-decoration: underline;
+}
