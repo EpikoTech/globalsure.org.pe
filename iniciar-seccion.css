@@ -5,6 +5,121 @@ body {
     min-height: 100vh;
     background: url('atardecer.jpg') no-repeat;
 }
+/*Para configurar la vista en desktop y movil*/
+/*Del Movil*/
+@media(max-width: 767px){
+    .desktop{
+        display: none;
+    }
+    body .movil{
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        height: 1650px;
+    }
+}
+.inicio-p {
+    width: 90%;
+    height: 68%;
+    background: transparent;
+    border: 4px solid rgb(235, 222, 216);
+    backdrop-filter: blur(17px);
+    color: #ffffff;
+    font-family: Arial;
+    border-radius: 20px;
+    padding: 40px 40px;
+    background-size: cover;
+    background-position: center;
+    position: static;
+    margin:0 auto;
+    margin-top: 32%;
+}
+
+/*Foto de perfil*/
+.inicio-p .foto-p {
+    background: rgb(255, 255, 255);
+    border-color: 3px solid rgb(183, 55, 121);
+    width: 350px;
+    height: 350px;
+    margin: 20px;
+    border-radius: 100%;
+    position: static;
+    margin:0 auto;
+    margin-bottom: 50px;
+    margin-top: 8%;
+}
+
+/*Formulario de iniciar sección*/
+.inicio-p .input-box-p {
+    width: 100%;
+    height: 90px;
+    background: transparent;
+    margin: 30px, 0;
+}
+.input-box-p input {
+    width: 91%;
+    height: 64px;
+    background: transparent;
+    outline: none;
+    border: 3px solid rgb(239, 220, 208);
+    border-radius:16px;
+    font-size: 30px;
+    color: #ffffff;
+    padding: 0px 10px 0px 10px;
+}
+
+.input-box-p p {
+    font-size: 34px;
+}
+
+/*Boton de Iniciar*/
+.inicio-p .botoon {
+    width: 92%;
+    height: 64px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 38px;
+    color: rgb(52, 45, 45);
+    margin-top: 14%;
+}
+
+/*Nuevo usuario - olvidaste la contraseña*/
+.inicio-p .nuevo-olvidaste-p{
+    display: flex;
+    justify-content: space-between;
+    font-size: 34px;
+    margin: 24px 0 15px;
+}
+
+.nuevo-olvidaste-p a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nuevo-olvidaste-p a:hover {
+    text-decoration: underline;
+}
+
+/*De 768 a 871
+@media (min-width: 768px) and (max-width: 871px) {
+    .movil2{
+        display:none;
+    }
+    .movil{
+        display:none;
+    }
+}
+*/
+
+/*Del desktop*/
+@media (min-width: 872px) {
+    .movil{
+        display:none;
+    }
+}
 
 .inicio {
     width: 410px;

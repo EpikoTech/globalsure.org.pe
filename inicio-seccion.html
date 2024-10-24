@@ -10,28 +10,57 @@
     <script src="registroajax.js"></script>
 </head>
 <body>
-    <div class="inicio">
-        <div class="foto">
-            <!-- Aquí puedes agregar una imagen o dejarlo vacío -->
+    <div class="desktop">
+        <div class="inicio">
+            <div class="foto">
+                <!-- Aquí puedes agregar una imagen o dejarlo vacío -->
+            </div>
+            <form id="loginForm" method="POST">
+                <p>Usuario</p>
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Ingrese su usuario" required>
+                </div>
+
+                <p>Clave</p>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Ingrese su clave" required>
+                </div>
+
+                <button type="submit" class="boton">Iniciar</button>
+
+                <div class="nuevo-olvidaste">
+                    <a href="#" data-toggle="modal" data-target="#registroModal">Nuevo Usuario</a>
+                    <a href="#" data-toggle="modal" data-target="#contraseñamodal">Olvidaste Clave?</a>
+                </div>
+            </form>
         </div>
-        <form id="loginForm" method="POST">
-            <p>Usuario</p>
-            <div class="input-box">
-                <input type="text" name="username" placeholder="Ingrese su usuario" required>
-            </div>
+    </div>
 
-            <p>Clave</p>
-            <div class="input-box">
-                <input type="password" name="password" placeholder="Ingrese su clave" required>
+    <!--Para el movil-->
+    <div class="movil">
+        <div class="inicio-p">
+            <div class="foto-p">
+                <!-- Aquí puedes agregar una imagen o dejarlo vacío -->
             </div>
+            <form id="loginForm" method="POST">
+                <div class="input-box-p">
+                    <p>USUARIO</p>
+                    <input type="text" name="username" placeholder="Ingrese su usuario" required>
+                </div>
+                <br><br><br>
+                <div class="input-box-p">
+                    <p>CLAVE</p>
+                    <input type="password" name="password" placeholder="Ingrese su clave" required>
+                </div>
 
-            <button type="submit" class="boton">Iniciar</button>
+                <button type="submit" class="botoon">Iniciar</button>
 
-            <div class="nuevo-olvidaste">
-                <a href="#" data-toggle="modal" data-target="#registroModal">Nuevo Usuario</a>
-                <a href="#" data-toggle="modal" data-target="#contraseñamodal">Olvidaste Clave?</a>
-            </div>
-        </form>
+                <div class="nuevo-olvidaste-p">
+                    <a href="#" data-toggle="modal" data-target="#registroModal">Nuevo Usuario</a>
+                    <a href="#" data-toggle="modal" data-target="#contraseñamodal">Olvidaste Clave?</a>
+                </div>
+            </form>
+        </div>
     </div>
 
     <!-- Modal que muestra la pantalla al equivocarse en iniciar sesión-->
