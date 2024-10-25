@@ -37,8 +37,7 @@ body {
 
 /*Foto de perfil*/
 .inicio-p .foto-p {
-    background: rgb(255, 255, 255);
-    border-color: 3px solid rgb(183, 55, 121);
+    background: url('logoGlobal.jpeg');
     width: 350px;
     height: 350px;
     margin: 20px;
