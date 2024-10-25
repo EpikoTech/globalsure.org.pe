@@ -9,12 +9,12 @@ body {
     background-image: url('atardecer.jpg');
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    background-position: center; /* Centra la imagen en la página */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Cambiar height por min-height */
     padding: 20px; /* Añadir padding */
+    
 }
 
 
