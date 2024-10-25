@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTRO</title>
     <link rel="stylesheet" href="registro2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery necesario para AJAX -->
+    <script src="registroajax.js"></script> <!-- Archivo JS para manejo de AJAX -->
 </head>
 <body>
     <div class="container">
         <h2>REGISTRO DE NUEVO USUARIO</h2>
-        <form>
+        <form id="registroForm"> <!-- Se añade el id para identificar el formulario -->
             <label for="usuario">Usuario:</label>
             <input type="text" id="usuario" name="usuario" required>
 
@@ -63,7 +65,7 @@
                 </div>
             </div>
 
-            <button type="submit">Guardar</button>
+            <button type="submit" id="btnGuardar">Guardar</button> <!-- Se añade el id para el botón de envío -->
         </form>
     </div>
 </body>
