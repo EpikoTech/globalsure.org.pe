@@ -35,7 +35,7 @@ body {
     margin-top: 32%; 
 }
 
-/*Foto de perfil*/
+/*Es el Logo*/
 .inicio-p .foto-p {
     background: url('logoGlobal.jpeg');
     width: 350px;
@@ -122,10 +122,9 @@ body {
     background-position: center;
 }
 
-/*Foto de perfil*/
+/*Es el Logo*/
 .inicio .foto {
-    background: rgb(255, 255, 255);
-    border-color: 3px solid rgb(183, 55, 121);
+    background: url('logoGlobal.jpeg');
     width: 160px;
     height: 160px;
     margin: 20px;
