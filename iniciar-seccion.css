@@ -102,17 +102,6 @@ body {
     text-decoration: underline;
 }
 
-/*De 768 a 871
-@media (min-width: 768px) and (max-width: 871px) {
-    .movil2{
-        display:none;
-    }
-    .movil{
-        display:none;
-    }
-}
-*/
-
 /*Del desktop*/
 @media (min-width: 872px) {
     .movil{
