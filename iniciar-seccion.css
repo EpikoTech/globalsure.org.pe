@@ -72,7 +72,6 @@ body {
     margin-top: 20px;
     margin-bottom: 10px;
 }
-
 /*Boton de Iniciar*/
 .inicio-p .botoon {
     width: 100%;
@@ -102,6 +101,7 @@ body {
     text-decoration: underline;
 }
 
+
 /*Del desktop*/
 @media (min-width: 872px) {
     .movil{
@@ -121,7 +121,6 @@ body {
     padding: 40px 40px;
     background-size: cover;
     background-position: center;
-
 }
 
 /*Foto de perfil*/
