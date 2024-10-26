@@ -1,21 +1,17 @@
 <?php
-// Incluye los controladores necesarios
-require_once "./controladores/controladorusuarios.php";
-require_once "./controladores/registrousuarios.php"; // Asegúrate de que el nombre del archivo sea correcto
+session_start();
+include_once('utils/Database.php');
+include_once('models/User.php');
+include_once('routes/Router.php');
+  // Cambia esto a ../utils/Database.php
+// Incluir la clase Router
 
-// Verificar qué acción se desea realizar
-$action = $_GET['action'] ?? 'login'; // Por defecto, se inicia sesión
+$router = new Router();
+// Definir las rutas
+$router->addRoute('login', 'views/login.php');
+$router->addRoute('register', 'views/registro.php');
+// Puedes agregar más rutas según sea necesario
 
-switch ($action) {
-    case 'register':
-        $registerController = new RegisterController();
-        $registerController->register(); // Llama al método de registro
-        break;
-
-    case 'login':
-    default:
-        $authController = new AuthController();
-        $authController->login(); // Llama al método de inicio de sesión
-        break;
-}
+$page = isset($_GET['page']) ? $_GET['page'] : 'login';
+$router->route($page);
 ?>
