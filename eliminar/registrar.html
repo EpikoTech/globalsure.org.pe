@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="registroajax.js"></script> <!-- Incluyendo el archivo ajax.js -->
+</head>
+<body>
+    <form action="registro.PHP" method="POST">
+        <label for="username">NOMBRE DE USUARIO :</label><br>
+        <input type="text" id="username" name="username" required ><br><br>
+
+        <label for="password">CONTRASENA</label><br>
+        <input type="password" id="password" name="password" required ><br><br>
+
+        <label for="nombres">Nombres</label><br>
+        <input type="text" id="nombres" name="nombres" required ><br><br>
+
+        <label for="apellidos">Apellidos</label><br>
+        <input type="text" id="apellidos" name="apellidos" required ><br><br>
+
+        <label for="dni">DNI</label><br>
+        <input type="" id="dni" name="dni" required ><br><br>
+
+        <label for="email">CORREO ELECTRONICO</label><br>
+        <input type="email" id="email" name="email" required ><br><br>
+
+        <label for="celular">CELULAR</label><br>
+        <input type="integer" id="celular" name="celular" required ><br><br>
+
+        <label for="fecha_nacimiento">FECHA DE NACIMIENTO</label><br>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required ><br><br>
+
+
+        <input type="submit" value="Registrar usuario">
+    </form>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
