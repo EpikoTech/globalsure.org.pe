@@ -3,7 +3,7 @@ $(document).ready(function() {
         event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
 
         $.ajax({
-            url: '/chat3/controllers/login.php', // Asegúrate de que la ruta sea correcta
+            url: '/globalsure.org.pe/controllers/login.php', 
             method: 'POST',
             data: $(this).serialize(), // Serializa los datos del formulario
             success: function(response) {

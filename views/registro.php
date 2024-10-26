@@ -40,7 +40,7 @@
             <p class="text-danger"><?php echo $error; ?></p>
         <?php endif; ?>
         <div class="mt-3 text-center">
-            <a href="../views/login.php" class="btn btn-link">Ya tengo una cuenta. Iniciar sesión</a>
+            <a href="../index.php" class="btn btn-link">Ya tengo una cuenta. Iniciar sesión</a>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
