@@ -26,7 +26,7 @@
             <button type="submit" class="boton">Iniciar Sesión</button>
 
             <div class="nuevo-olvidaste">
-                <a href="views/registro.php" class="btn btn-primary">Registrarse</a>
+                <a href="views/register.php" class="btn btn-primary">Registrarse</a>
                 <a href="recuperar-clave.php" class="btn btn-link">Olvidaste Clave?</a>
             </div>
         </form>
