@@ -5,7 +5,7 @@ header('Content-Type: application/json'); // Indica que la respuesta es JSON
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "globalsure"; 
+$dbname = ""; 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

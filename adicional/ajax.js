@@ -4,7 +4,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: 'POST',
-            url: 'login.php', // Ruta al archivo PHP
+            url: '', // Ruta al archivo PHP
             data: $(this).serialize(),
             dataType: 'json',
             success: function(response) {
