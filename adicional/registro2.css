@@ -13,10 +13,9 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Cambiar height por min-height */
-    padding: 20px; /* Añadir padding */
-    
-}
+    padding: 20px; 
 
+}
 
 .container {
     background-color: white;
