@@ -37,15 +37,16 @@ body {
 
 /*Es el Logo*/
 .inicio-p .foto-p {
-    background: url('logoGlobal.jpeg');
-    width: 350px;
+    width: 340px;
     height: 350px;
     margin: 20px;
-    border-radius: 100%;
     position: static;
     margin:0 auto;
     margin-bottom: 50px;
-    margin-top: 8%;
+    margin-top: 10%;
+}
+.foto-p img{
+    width: 360px;
 }
 
 /*Formulario de iniciar sección*/
@@ -124,15 +125,17 @@ body {
 
 /*Es el Logo*/
 .inicio .foto {
-    background: url('logoGlobal.jpeg');
     width: 160px;
     height: 160px;
-    margin: 20px;
     border-radius: 100%;
     position: static;
     margin:0 auto;
     margin-top: 10px;
     margin-bottom: -20px;
+}
+
+.foto img{
+    width: 180px;
 }
 
 /*Formulario de iniciar sección*/
