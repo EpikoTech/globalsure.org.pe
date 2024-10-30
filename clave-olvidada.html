@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REGISTRO</title>
+    <link rel="stylesheet" href="clave-olvidada.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery necesario para AJAX -->
+    <script src="registroajax.js"></script> <!-- Archivo JS para manejo de AJAX -->
+</head>
+<body>
+    <div class="desktop">
+        <div class="contenedor">
+            <h2>RECUPERAR LA CONTRASEÑA</h2>
+            <form id="clave">
+                <div class="input-box">
+                    <p for="">Usuario</p>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+    
+                <div class="input-box">
+                    <p for="">Correo</p>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+    
+                <button type="submit" id="btnGuardar">Enviar codigo</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="movil">
+        <div class="contenedor-p">
+            <h2>RECUPERAR LA CONTRASEÑA</h2>
+            <form id="clave">
+                <div class="input-box-p">
+                    <p for="">Usuario</p>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+    
+                <div class="input-box-p">
+                    <p for="">Correo</p>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+    
+                <button type="submit" id="btnGuardar" class="boton-p">Enviar codigo</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
