@@ -1,10 +1,11 @@
-bbody {
+body {
     display:flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background: url('atardecer.jpg') no-repeat;
 }
+
 /*Para configurar la vista en desktop y movil*/
 /*Del Movil*/
 @media(max-width: 767px){
