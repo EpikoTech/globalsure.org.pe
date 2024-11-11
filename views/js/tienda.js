@@ -1,38 +1,44 @@
 $(document).ready(function() {
-    // Agregar un producto al carrito
-    $('.add-to-cart').click(function() {
-        var productId = $(this).data('product-id');
-        var productName = $(this).data('product-name');
-        var productPrice = $(this).data('product-price');
-        
-        // Guardar en el carrito (en sesión o cookies)
-        addToCart(productId, productName, productPrice);
-    });
 
-    function addToCart(id, name, price) {
-        // Aquí se puede agregar la lógica para guardar el producto en el carrito
-        // Usando la sesión o cookies para almacenar los productos agregados
-        // Por ejemplo:
-        var cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.push({ id: id, name: name, price: price });
-        localStorage.setItem('cart', JSON.stringify(cart));
+    // Cargar productos por categoría cuando se haga clic en una categoría
+    $('.category-link').on('click', function(e) {
+        e.preventDefault(); // Evita el comportamiento por defecto del enlace
 
-        alert('Producto agregado al carrito');
-    }
+        var categoryId = $(this).data('id'); // Obtener el ID de la categoría
 
-    // Mostrar carrito al hacer clic en el icono
-    $('#cartIcon').click(function() {
-        showCart();
-    });
+        // Realizar la solicitud AJAX para obtener los productos de esta categoría
+        $.ajax({
+            url: '/globalsure.org.pe/controllers/getUserProducts.php',  // URL del controlador
+            method: 'GET',
+            data: { categoria_id: categoryId },
+            success: function(response) {
+                if (response.success) {
+                    // Si la solicitud es exitosa, mostramos los productos
+                    var products = response.products;
+                    var productHtml = '';
+                    
+                    products.forEach(function(product) {
+                        productHtml += '<div class="col-md-4 mb-4">';
+                        productHtml += '<div class="card">';
+                        productHtml += '<img src="' + product.imagen + '" class="card-img-top" alt="' + product.nombre + '">';
+                        productHtml += '<div class="card-body">';
+                        productHtml += '<h5 class="card-title">' + product.nombre + '</h5>';
+                        productHtml += '<p class="card-text">S/ ' + product.precio + '</p>';
+                        productHtml += '<a href="#" class="btn btn-primary">Ver producto</a>';
+                        productHtml += '</div>';
+                        productHtml += '</div>';
+                        productHtml += '</div>';
+                    });
 
-    function showCart() {
-        var cart = JSON.parse(localStorage.getItem('cart')) || [];
-        var cartHtml = "<h5>Tu Carrito</h5>";
-        cart.forEach(function(item) {
-            cartHtml += "<p>" + item.name + " - " + item.price + "</p>";
+                    $('#product-container').html(productHtml); // Insertar productos en el contenedor
+                } else {
+                    // Si hubo un error
+                    alert('Error al cargar los productos.');
+                }
+            },
+            error: function() {
+                alert('Hubo un problema al obtener los productos.');
+            }
         });
-        cartHtml += "<button>Finalizar compra</button>";
-
-        $('#cartContainer').html(cartHtml);
-    }
+    });
 });

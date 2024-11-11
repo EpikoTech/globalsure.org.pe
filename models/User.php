@@ -27,13 +27,13 @@ class User {
     }
     //metodo para login
     public function getUserByUsername($username) {
-        $sql = "SELECT id, username, password, nombres, activo FROM usuarios WHERE username = ?";
+        $sql = "SELECT id, username, password, nombres, apellidos, is_admin, activo FROM usuarios WHERE username = ?";
         $stmt = $this->database->prepare($sql); // Prepara la consulta
         $stmt->bind_param("s", $username); // Vincula el parámetro
         $stmt->execute(); // Ejecuta la consulta
         $result = $stmt->get_result(); // Obtiene los resultados
         return $result->fetch_assoc(); // Devuelve los datos del usuario
-    }    
+    }
     
 
     //Token de Activación:

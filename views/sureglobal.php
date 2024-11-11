@@ -1,11 +1,13 @@
 <?php
 session_start();
 
-// Verificar si el usuario está autenticado mediante la sesión
+// Verificar si el usuario está autenticado
 if (!isset($_SESSION['user_id'])) {
-    header("Location: /globalsure.org.pe"); // Redirige a la página de inicio si no está logueado
+    header("Location: /globalsure.org.pe"); // Redirige al login si no está logueado
     exit();
 }
+
+// Aquí va el contenido para el usuario normal (tienda)
 ?>
 
 <!DOCTYPE html>
@@ -53,80 +55,24 @@ if (!isset($_SESSION['user_id'])) {
             <div class="col-md-3">
                 <h4>Categorías</h4>
                 <ul class="list-group">
-                    <li class="list-group-item">Cámaras digitales</li>
-                    <li class="list-group-item">Cámaras deportivas</li>
-                    <li class="list-group-item">Drones</li>
-                    <li class="list-group-item">Accesorios</li>
+                    <?php
+                    // Obtener categorías de la base de datos
+                    include_once('../models/Category.php');
+                    $categorias = Category::getAllCategories();
+                    foreach ($categorias as $categoria) {
+                        echo '<li class="list-group-item category-link" data-id="' . $categoria['id'] . '">' . $categoria['nombre'] . '</li>';
+                    }
+                    ?>
                 </ul>
             </div>
 
             <!-- Productos (lado derecho) -->
             <div class="col-md-9">
-                <div class="product-container active">
+                <div class="product-container" id="product-container">
                     <div class="row">
-                        <!-- Productos -->
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Cámara Sony">
-                                <div class="card-body">
-                                    <h5 class="card-title">Cámara Sony</h5>
-                                    <p class="card-text">S/ 1599</p>
-                                    <a href="#" class="btn btn-primary">Ver producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Cámara Sony">
-                                <div class="card-body">
-                                    <h5 class="card-title">Cámara Sony</h5>
-                                    <p class="card-text">S/ 1599</p>
-                                    <a href="#" class="btn btn-primary">Ver producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Cámara Sony">
-                                <div class="card-body">
-                                    <h5 class="card-title">Cámara Sony</h5>
-                                    <p class="card-text">S/ 1599</p>
-                                    <a href="#" class="btn btn-primary">Ver producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Agrega más productos aquí (hasta 6) -->
+                        <!-- Aquí se insertarán los productos por AJAX -->
                     </div>
                 </div>
-
-                <div class="product-container">
-                    <div class="row">
-                        <!-- Productos -->
-                        <div class="col-md-4 mb-4">
-                            <div class="card">
-                                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Cámara Olympus">
-                                <div class="card-body">
-                                    <h5 class="card-title">Cámara Olympus</h5>
-                                    <p class="card-text">S/ 2599</p>
-                                    <a href="#" class="btn btn-primary">Ver producto</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Agrega más productos aquí (hasta 6) -->
-                    </div>
-                </div>
-
-                <!-- Paginación -->
-                <nav aria-label="Page navigation">
-                    <div class="d-flex justify-content-between">
-                        <a class="btn btn-secondary" id="prev-btn" href="#">Anterior</a>
-                        <a class="btn btn-secondary" id="next-btn" href="#">Siguiente</a>
-                    </div>
-                    <ul class="pagination justify-content-center mt-2">
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>
@@ -142,4 +88,3 @@ if (!isset($_SESSION['user_id'])) {
     <script src="/globalsure.org.pe/views/js/logout.js"></script>
 </body>
 </html>
-
